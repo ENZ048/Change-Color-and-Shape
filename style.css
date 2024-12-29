@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    margin-top: 15rem;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#output{
+    background-color: aqua;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 0.7rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.90);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+.square{
+    width: 130px;
+    height: 130px;
+    background-color: white;
+}
+
+.circle{
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 130px solid white;
+    background: none;
+}
+
+.rectangle {
+    width: 150px;
+    height: 100px;
+    background-color: white;
+}
+
+.diamond {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.cross {
+    position: relative;
+    width: 130px;
+    height: 30px;
+    background-color: white;
+}
+
+.cross:before {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 130px;
+    height: 30px;
+    background-color: white;
+}
+
+
+.hexagon {
+    height: 150px;
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+    background: white;
+  }
+
+.arrow {
+    --t: 45%;
+    --h: 40%;
+    aspect-ratio: 3/2;
+    width: 200px;
+    background: white;;
+    clip-path: polygon(0 calc(50% - var(--t)/2),calc(100% - var(--h)) calc(50% - var(--t)/2),calc(100% - var(--h)) 0,100% 50%,calc(100% - var(--h)) 100%,calc(100% - var(--h)) calc(50% + var(--t)/2),0 calc(50% + var(--t)/2));
+  }
+
+
+.star {
+    width: 200px;  
+    aspect-ratio: 1;
+    background: white;
+    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%);
+  }
